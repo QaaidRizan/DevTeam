@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import './navbar.css';
+import LogoMy from '../../assets/LogoMy.webp'; // Add this import at the top
+
+const Navbar = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="navbar-wrapper">
+      <nav className="navbar">
+        <div className="navbar-container">
+          {/* Logo */}
+          <div className="navbar-logo">
+            <img src={LogoMy} alt="DevTeam Logo" className="navbar-logo-img" />
+            DevTeam
+          </div>
+          
+          {/* Desktop Navigation */}
+          <ul className={`navbar-links ${mobileMenuOpen ? 'show' : ''}`}>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#team">Team</a></li>
+            <li
+              className="navbar-dropdown"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <a href="#service">Service &#9662;</a>
+              {dropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li><a href="#web-development">Web Development</a></li>
+                  <li><a href="#pos-system">POS System</a></li>
+                  <li><a href="#crm-system">CRM System</a></li>
+                  <li><a href="#figma-designing">Figma Designing</a></li>
+                </ul>
+              )}
+            </li>
+          </ul>
+          
+          {/* Mobile Menu Button */}
+          <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          {/* Inquiry Button - For larger screens */}
+          <div className="inquiry-button">
+            <a href="#inquiry" className="btn-primary">Inquiry</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,134 @@
+.project-section {
+  padding: 30px 0;
+  background: #212121;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.project-container {
+  max-width: 1550px;      /* Match .about-container */
+  margin: 0 auto;
+  padding: 0 29px;        /* Match .about-container's padding */
+  position: relative;
+  z-index: 1;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 50px;   /* Reduced from 50px */
+  position: relative;
+}
+
+.project-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+}
+
+/* Grid layout for the 4 projects */
+.project-grid {
+  width: 100%;
+  max-width: 1450px;     /* Increased from 1200px to use more space */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 12px;             /* Increased from 5px to 12px */
+  padding: 0;            /* Remove padding since it's in the container */
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 15px 15px 8px 15px;  /* Reduced from 20px 20px 10px 20px */
+}
+
+.project-card p {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 25px 25px 25px;    /* Reduced from 0 20px 20px 20px */
+  flex-grow: 1;
+}
+
+.project-link {
+  display: inline-block;
+  margin: 0 15px 15px 15px;    /* Reduced from 0 20px 20px 20px */
+  padding: 8px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 20px;           /* Maintain the larger gap on tablets */
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 30px 0;           /* Reduced from 40px */
+    background: #181818; /* Match the about section's mobile bg color */
+  }
+  
+  .project-container {
+    padding: 0 29px;    /* Keep the same padding on mobile */
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 15px;           /* A medium gap for mobile */
+  }
+  
+  .project-title {
+    margin-bottom: 25px;       /* Reduced further on mobile */
+  }
+}

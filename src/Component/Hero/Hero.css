@@ -1,0 +1,169 @@
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #212121; /* fallback background */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-background img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center top; /* Center horizontally, top vertically */
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent; /* No shade */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* Align to left */
+  justify-content: center; /* Align to top */
+  height: 100vh;              /* Full height */
+  padding: 6rem;              /* Optional: add some space from edges */
+}
+
+.hero-text {
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  align-items: flex-start;
+  margin-left: 0;           /* No left margin */
+  margin-top: 0;            /* No top margin */
+}
+
+.hero-title {
+  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 8.5vw, 5rem); /* Increased heading size */
+  font-weight: bold;
+  color: #fff;                         /* Bright white for heading */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Optional: subtle shadow for contrast */
+}
+
+.hero-description {
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.hero-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    padding: 1.5rem 0.5rem;
+    box-sizing: border-box;
+  }
+  .hero-background,
+  .hero-background img,
+  .hero-overlay {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+  }
+  .hero-background img {
+    object-position: center 0px; /* Move image slightly down on mobile */
+  }
+  .hero-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  .hero-button {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  .hero-text {
+    max-width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: left;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+.pop-in {
+  animation: popIn 0.7s cubic-bezier(0.23, 1.02, 0.32, 1) forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.7);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

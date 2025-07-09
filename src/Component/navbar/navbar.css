@@ -1,0 +1,220 @@
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(34, 34, 34, 0.15);  /* Increased transparency from 0.4 to 0.15 */
+  backdrop-filter: blur(12px);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  reduce: 1;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.navbar-links li {
+  margin: 0 1.2rem;
+  position: relative;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 0.3rem;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links a:hover {
+  color: #2563eb;
+  background: rgba(255,255,255,0.07);
+}
+
+.navbar-dropdown > a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: rgba(34, 34, 34, 0.85);  /* Increased transparency from 0.97 */
+  backdrop-filter: blur(8px);
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  min-width: 180px;
+  padding: 0.5rem 0;
+  z-index: 200;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none;  /* This removes the bullets */
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0.3rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.dropdown-menu a:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/* Inquiry Button */
+.inquiry-button {
+  margin-left: auto;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+  border: 2px solid #fff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobile-menu-toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Desktop: keep nav in one line until very small screens */
+@media (max-width: 992px) {
+  .navbar-links {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .navbar-links li {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Mobile: stack nav vertically, full width links */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    margin: 0;
+    background: rgba(34, 34, 34, 0.97);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1.5rem 2rem;
+    transition: all 0.3s ease;
+    z-index: 5;
+  }
+  
+  .navbar-links.show {
+    right: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0.8rem 0;
+    width: 100%;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .inquiry-button {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 0.5rem;
+    box-shadow: none;
+  }
+}
