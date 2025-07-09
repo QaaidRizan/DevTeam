@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './navbar.css';
-import LogoMy from '../../assets/LogoMy.webp'; // Add this import at the top
+import LogoMy from '../../assets/LogoMy.webp'; // Add this import at the top4
+import Contact from '../Contact/contact';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -49,7 +50,19 @@ const Navbar = () => {
           
           {/* Inquiry Button - For larger screens */}
           <div className="inquiry-button">
-            <a href="#inquiry" className="btn-primary">Inquiry</a>
+            <a
+              href="#contact"
+              className="btn-primary"
+              onClick={e => {
+                e.preventDefault();
+                const section = document.getElementById('contact');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Inquiry
+            </a>
           </div>
         </div>
       </nav>
