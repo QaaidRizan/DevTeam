@@ -52,8 +52,8 @@ const Footer = () => {
             <div className="footer-links-column">
               <h4>Contact</h4>
               <ul className="contact-info">
-                <li>hello@devteam.com</li>
-                <li>+1 (234) 567-890</li>
+                <li>qaaidrizan113@gmail.com</li>
+                <li>+94 752-622-860</li>
                 <li>Sri Lanka</li>
               </ul>
             </div>

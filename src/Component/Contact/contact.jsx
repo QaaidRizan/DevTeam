@@ -72,25 +72,25 @@ const Contact = () => {
             </p>
             
             <div className="contact-methods">
-              <a href="https://wa.me/1234567890" className="contact-method whatsapp" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/94752622860" className="contact-method whatsapp" target="_blank" rel="noopener noreferrer">
                 <div className="method-icon">
                   <FaWhatsapp />
                 </div>
                 <div className="method-details">
                   <h4>WhatsApp</h4>
                   <p>Chat Now</p>
-                  <span>+1 (234) 567-890</span>
+                  <span>+94 075 262 2860</span>
                 </div>
               </a>
               
-              <a href="mailto:hello@devteam.com" className="contact-method email">
+              <a href="mailto:qaaidrizan113@gmail.com" className="contact-method email">
                 <div className="method-icon">
                   <FaEnvelope />
                 </div>
                 <div className="method-details">
                   <h4>Email</h4>
                   <p>Send a Message</p>
-                  <span>hello@devteam.com</span>
+                  <span>qaaidrizan113@gmail.com</span>
                 </div>
               </a>
             </div>
@@ -160,7 +160,7 @@ const Contact = () => {
         <div className="cta-banner">
           <div className="cta-content">
             <h3>💬 Want a free demo? Message me on WhatsApp!</h3>
-            <a href="https://wa.me/1234567890" className="cta-button" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/94752622860" className="cta-button" target="_blank" rel="noopener noreferrer">
               🟢 Chat Now
             </a>
           </div>
