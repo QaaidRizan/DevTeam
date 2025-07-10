@@ -13,7 +13,7 @@ const Footer = () => {
             <h3 className="footer-logo">DevTeam</h3>
             <p className="footer-tagline">Modern web development solutions for your business needs</p>
             <div className="footer-social">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="FaceBook">
+              <a href="https://www.facebook.com/devteam1721" target="_blank" rel="noopener noreferrer" aria-label="FaceBook">
                 <FaFacebook />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
