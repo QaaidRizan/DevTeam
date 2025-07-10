@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './navbar.css';
 import LogoMy from '../../assets/LogoMy.webp'; // Add this import at the top4
 import Contact from '../Contact/contact';
+import Project from '../../Component/Project/project';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -12,16 +13,38 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           {/* Logo */}
-          <div className="navbar-logo">
+          <div
+            className="navbar-logo"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              const heroSection = document.getElementById('Hero');
+              if (heroSection) {
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <img src={LogoMy} alt="DevTeam Logo" className="navbar-logo-img" />
             DevTeam
           </div>
           
           {/* Desktop Navigation */}
           <ul className={`navbar-links ${mobileMenuOpen ? 'show' : ''}`}>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#Hero">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#project">Project</a></li>
+            <li>
+              <a
+                href="#project"
+                onClick={e => {
+                  e.preventDefault();
+                  const projectSection = document.getElementById('project');
+                  if (projectSection) {
+                    projectSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Project
+              </a>
+            </li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#team">Team</a></li>
             <li
@@ -32,10 +55,10 @@ const Navbar = () => {
               <a href="#service">Service &#9662;</a>
               {dropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="#web-development">Web Development</a></li>
-                  <li><a href="#pos-system">POS System</a></li>
-                  <li><a href="#crm-system">CRM System</a></li>
-                  <li><a href="#figma-designing">Figma Designing</a></li>
+                  <li><a href="#project">Web Development</a></li>
+                  <li><a href="#project">POS System</a></li>
+                  <li><a href="#project">CRM System</a></li>
+                  <li><a href="#project">Figma Designing</a></li>
                 </ul>
               )}
             </li>
