@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .contact-section {
   padding: 60px 0;
   background: #212121;
@@ -37,8 +41,8 @@
 
 .contact-container {
   max-width: 1450px;
-  margin: 0 auto;
-  padding: 0 29px;
+  margin: 0 auto;  /* Fix from "margin: 4 auto" */
+  padding: 0 20px;  /* Consistent padding */
   position: relative;
   z-index: 1;
 }
@@ -170,15 +174,6 @@
   border-radius: 16px;
   padding: 40px;     /* Keep even padding all around */
   border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* To ensure consistent spacing with other sections */
-.contact-container {
-  max-width: 1450px;
-  margin: 4 auto;
-  padding: 0 35px;   /* Maintain consistent 29px left/right padding */
-  position: relative;
-  z-index: 1;
 }
 
 .contact-form-container h3 {
@@ -320,24 +315,57 @@
     background: #181818;
   }
   
+  .contact-container {
+    padding: 0 5x; /* Reduce container padding */
+  }
+  
   .contact-title {
     font-size: 2rem;
   }
   
   .contact-content {
     margin: 40px 0;
-  }
-  
-  .cta-banner {
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  .cta-content h3 {
-    font-size: 1.2rem;
+    width: 100%;
   }
   
   .contact-form-container {
-    padding: 25px 20px;  /* Slightly reduced padding on mobile */
+    padding: 15px;  /* Further reduce padding */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .form-group {
+    margin-bottom: 10x;
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    max-width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Fix for potential nested media query issue */
+}
+
+/* Create a separate media query for very small devices */
+@media (max-width: 320px) {
+  .contact-form-container {
+    padding: 12px 8px;  /* Even less padding for tiny screens */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 6px 8px;
+    font-size: 14px;
   }
 }

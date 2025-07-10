@@ -62,8 +62,21 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    padding: 0 15px 0 10px;  /* Less padding on left, more on right */
+  }
+  
+  /* Remove the conflicting padding rule */
   .about-card {
-    padding: 0 10px;     /* Reduce padding on small screens */
+    padding: 0;
+  }
+  
+  /* Make sure content is properly aligned */
+  .about-text, 
+  .service-card,
+  .about-quote,
+  .stat-card {
+    padding-left: 5px;  /* Add a bit more left padding to content elements */
   }
 }
 
@@ -254,6 +267,10 @@ html, body {
 
 /* Mobile responsiveness */
 @media (max-width: 992px) {
+  .about-container {
+    padding: 0 20px;  /* Ensure consistent padding */
+  }
+
   .about-section {
     padding: 40px 0; /* Also reduce on medium screens */
   }
@@ -273,6 +290,23 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    padding: 0 15px 0 10px;  /* Less padding on left, more on right */
+  }
+  
+  /* Remove the conflicting padding rule */
+  .about-card {
+    padding: 0;
+  }
+  
+  /* Make sure content is properly aligned */
+  .about-text, 
+  .service-card,
+  .about-quote,
+  .stat-card {
+    padding-left: 5px;  /* Add a bit more left padding to content elements */
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
   }
