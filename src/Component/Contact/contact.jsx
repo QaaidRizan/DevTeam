@@ -90,7 +90,7 @@ const Contact = () => {
                 <div className="method-details">
                   <h4>Email</h4>
                   <p>Send a Message</p>
-                  <span>qaaidrizan113@gmail.com</span>
+                  <span>contactdevteam1721@gmail.com</span>
                 </div>
               </a>
             </div>

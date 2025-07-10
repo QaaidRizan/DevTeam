@@ -4,10 +4,9 @@ import About from '../../Component/About/About';
 import Project from '../../Component/Project/project';
 import Team from '../../Component/Team/team';
 import Testimonial from '../../Component/Testimonial/testimonial'; 
-import Contact from '../../Component/Contact/contact'; // Assuming you have a Contact component
-import Footer from '../../Component/Footer/footer'; // Assuming you have a Footer component
-
-
+import Contact from '../../Component/Contact/contact';
+import Footer from '../../Component/Footer/footer';
+import WhatsAppButton from '../../Component/WhatsAppButton'; // Import WhatsApp button
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -26,7 +25,8 @@ const Home = () => {
         <Contact />
         <Footer />
       </div>
-      {/* Future sections can be added here, using refs as needed */}
+      {/* Add WhatsApp Button - it will position itself in bottom right corner */}
+      <WhatsAppButton />
     </div>
   );
 };
