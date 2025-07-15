@@ -59,7 +59,7 @@ const Contact = () => {
       <div className="contact-blob secondary"></div>
       
       <div className="contact-container">
-        <div className="section-header">
+        <div className="section-header-contact">
           <h2 className="contact-title">Ready to Start Your Project?</h2>
         </div>
         

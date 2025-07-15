@@ -111,6 +111,7 @@
 .copyright {
   color: #a0a0a0;
   font-size: 0.9rem;
+  align-self: center;
 }
 
 .footer-legal {
@@ -127,6 +128,13 @@
 
 .footer-legal a:hover {
   color: #2563eb;
+}
+
+.footer-logo-img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0;
 }
 
 @media (max-width: 992px) {

@@ -1,0 +1,553 @@
+.web-projects-page {
+  background-color: #212121;
+  color: #fff;
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1600px;        /* Increased from 1400px */
+  margin-bottom: 40px;
+  padding-left: 10px;       /* Reduced from 20px */
+  padding-right: 10px;      /* Reduced from 20px */
+  width: 98%;               /* Increased from 95% */
+  box-sizing: border-box;
+}
+
+/* Section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section-header.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+/* Project cards */
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.project-card {
+  display: flex;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.project-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #2f2f2f, #1a1a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.2rem;
+  border: 1px dashed #444;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-category {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.project-content p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tech-stack span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Image carousel styles - ADD THIS TO YOUR CSS */
+.image-carousel {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: white;
+}
+
+.project-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;               /* Reduced from 25px to allow more content */
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .project-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-images-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-image-item {
+  width: 380px;            /* Increased from 350px */
+  height: 260px;           /* Increased from 240px */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Web Development Introduction Section */
+.web-dev-intro {
+  margin-bottom: 70px;
+  padding: 40px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(20, 20, 24, 0.8), rgba(30, 30, 40, 0.8));
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.intro-header p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: rgba(30, 30, 40, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-icon svg {
+  color: #3b82f6;
+  font-size: 28px;
+}
+
+.service-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.intro-approach {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #3b82f6;
+}
+
+.intro-approach h3 {
+  color: #3b82f6;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.intro-approach p {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.portfolio-header p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Project Information Container Styles */
+.project-info-container {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-left: 10px; /* Keep left margin as is */
+  margin-right: 0; /* Remove right margin to reduce gap */
+  max-width: 100%; /* Increase from 800px to fill more space */
+  padding: 32px 36px;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-info-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(59, 130, 246, 0.2);
+  
+}
+
+.project-info-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+  padding-bottom: 12px;
+}
+
+.project-info-text {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.project-info-list {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  padding-left: 25px;
+}
+
+.project-info-list li {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.project-info-list li::before {
+  content: "•";
+  color: #3b82f6;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.4em;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .project-card, .project-card.reverse {
+    flex-direction: column;
+  }
+  
+  .project-image {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .project-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .web-projects-page {
+    padding: 60px 0;
+  }
+  
+  .featured-projects {
+    gap: 60px;
+  }
+  
+  .container {
+    padding-left: 8px;     /* Further reduced from 12px */
+    padding-right: 8px;
+    width: 100%;           /* Maximum width on mobile */
+  }
+  
+  .web-dev-intro {
+    padding: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .intro-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .intro-header p {
+    font-size: 1rem;
+  }
+  
+  .service-card {
+    padding: 20px;
+  }
+  
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .intro-approach {
+    padding: 20px;
+  }
+  
+  .intro-approach h3 {
+    font-size: 1.3rem;
+  }
+  
+  .portfolio-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .project-info-container {
+    padding: 24px 20px;
+         /* Reduced from 20px */
+  }
+  
+  .project-info-title {
+    font-size: 1.6rem;
+  }
+  
+  .project-info-text,
+  .project-info-list {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-image-item {
+    width: 360px;
+    height: 250px;
+  }
+}

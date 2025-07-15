@@ -30,7 +30,7 @@ const Hero = () => {
             Unlock your business potential with a professional website. We build modern, responsive, and scalable web solutions tailored to your business needs.
             Let our experienced team help you establish a strong online presence and reach more customers.
           </p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={() => window.location.href = '/#contact'}>
             Start Your Project
           </button>
         </div>

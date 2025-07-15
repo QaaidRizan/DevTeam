@@ -8,30 +8,48 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   return (
-    <a 
-      href={whatsappUrl} 
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ 
-        position: 'fixed',
-        bottom: '24px',
-        right: '24px',
-        zIndex: 9999,
-        borderRadius: '50%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <img 
-        src={whatsappLogo} 
-        alt="WhatsApp" 
+    <>
+      <style>
+        {`
+          @keyframes whatsapp-glow {
+            0% {
+              box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+              box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+              box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+          }
+        `}
+      </style>
+      <a 
+        href={whatsappUrl} 
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ 
-          width: '60px',
-          height: '60px'
-        }} 
-      />
-    </a>
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          zIndex: 9999,
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          animation: 'whatsapp-glow 2s infinite'
+        }}
+      >
+        <img 
+          src={whatsappLogo} 
+          alt="WhatsApp" 
+          style={{ 
+            width: '60px',
+            height: '60px'
+          }} 
+        />
+      </a>
+    </>
   );
 };
 

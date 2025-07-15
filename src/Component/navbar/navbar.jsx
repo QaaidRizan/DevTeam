@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import LogoMy from '../../assets/LogoMy.webp'; // Add this import at the top4
-import Contact from '../Contact/contact';
-import Project from '../../Component/Project/project';
 
-const Navbar = () => {
+const Navbar = ({ hide }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="navbar-wrapper">
+    <header className={`navbar-wrapper${hide ? ' navbar-hidden' : ''}`}>
       <nav className="navbar">
         <div className="navbar-container">
           {/* Logo */}
@@ -29,24 +27,15 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <ul className={`navbar-links ${mobileMenuOpen ? 'show' : ''}`}>
-            <li><a href="#Hero">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="/#Hero">Home</a></li>
+            <li><a href="/#about">About Us</a></li>
             <li>
-              <a
-                href="#project"
-                onClick={e => {
-                  e.preventDefault();
-                  const projectSection = document.getElementById('project');
-                  if (projectSection) {
-                    projectSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
+              <a href="/webproject">
                 Project
               </a>
             </li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#team">Team</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/#team">Team</a></li>
             <li
               className="navbar-dropdown"
               onMouseEnter={() => setDropdownOpen(true)}
@@ -55,10 +44,8 @@ const Navbar = () => {
               <a href="#service">Service &#9662;</a>
               {dropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="#project">Web Development</a></li>
-                  <li><a href="#project">POS System</a></li>
-                  <li><a href="#project">CRM System</a></li>
-                  <li><a href="#project">Figma Designing</a></li>
+                  <li><a href="/webproject">Web Development</a></li>
+                  <li><a href="/project">POS System</a></li>
                 </ul>
               )}
             </li>

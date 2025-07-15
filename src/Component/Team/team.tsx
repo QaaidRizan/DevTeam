@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './team.css';
 // You'll need to add an actual image here
-import profileImage from '../../assets/Qaaid.webp'; // Add a profile image to your assets folder
+import profileImage from '../../assets/ME.webp'; // Add a profile image to your assets folder
 
 const Team = () => {
   const sectionRef = useRef(null);

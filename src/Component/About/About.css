@@ -80,7 +80,7 @@ html, body {
   }
 }
 
-.section-header {
+.section-header-about {
   text-align: center;
   margin-bottom: 60px;
 }
@@ -98,7 +98,7 @@ html, body {
   text-transform: uppercase;
 }
 
-.about-title {
+.about-titles {
   font-size: 2.5rem;
   margin-bottom: 16px;
   color: #ffffff;
@@ -282,6 +282,7 @@ html, body {
   
   .about-title {
     font-size: 2rem;
+    color: #ffffff;;
   }
   
   .services-grid {

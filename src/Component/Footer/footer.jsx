@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css';
+import logo from '../../assets/LogoMy.webp';
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram , FaFacebook} from 'react-icons/fa';
 
 const Footer = () => {
@@ -10,6 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-brand">
+            <img src={logo} alt="DevTeam Logo" className="footer-logo-img" />
             <h3 className="footer-logo">DevTeam</h3>
             <p className="footer-tagline">Modern web development solutions for your business needs</p>
             <div className="footer-social">
@@ -52,8 +54,8 @@ const Footer = () => {
             <div className="footer-links-column">
               <h4>Contact</h4>
               <ul className="contact-info">
-                <li>qaaidrizan113@gmail.com</li>
-                <li>+94 752-622-860</li>
+                <li>contactdevteam1721@gmail.com</li>
+                <li>+94 75-262-2860</li>
                 <li>Sri Lanka</li>
               </ul>
             </div>

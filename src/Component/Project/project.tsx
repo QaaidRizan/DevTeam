@@ -25,7 +25,7 @@ const projects: Project[] = [
     title: 'Company portfolio',
     description: 'A portfolio website showcasing company projects, team, and services with a modern design.',
     image: Tereen,
-    link: 'https://terrene-engineering-prototype-qaaidrizan113-gmailcoms-projects.vercel.app/'
+    link: 'https://terren.vercel.app/'
   },
  
   {
@@ -47,8 +47,8 @@ const Project = () => (
     <h2 className="project-title">Explore Our Recent Projects</h2>
     <div className="project-grid">
       {projects.map((proj, idx) => (
-        <div className="project-card" key={idx}>
-          <img src={proj.image} alt={proj.title} className="project-image" />
+        <div className="project-cards" key={idx}>
+          <img src={proj.image} alt={proj.title} className="project-images" />
           <h3>{proj.title}</h3>
           <p>{proj.description}</p>
           {proj.link && (

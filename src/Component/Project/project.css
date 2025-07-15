@@ -45,7 +45,7 @@
   padding: 0;            /* Remove padding since it's in the container */
 }
 
-.project-card {
+.project-cards {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   overflow: hidden;
@@ -57,26 +57,26 @@
   flex-direction: column;
 }
 
-.project-card:hover {
+.project-cards:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   border-color: rgba(37, 99, 235, 0.3);
 }
 
-.project-image {
+.project-images {
   width: 100%;
   height: 240px;
   object-fit: cover;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.project-card h3 {
+.project-cards h3 {
   color: #ffffff;
   font-size: 1.4rem;
   margin: 15px 15px 8px 15px;  /* Reduced from 20px 20px 10px 20px */
 }
 
-.project-card p {
+.project-cards p {
   color: #b0b0b0;
   font-size: 1rem;
   line-height: 1.6;

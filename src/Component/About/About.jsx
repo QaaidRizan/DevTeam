@@ -37,8 +37,8 @@ const About = () => {
           <div className="about-card-overlay">
             <div className="about-card-content">
               {/* Move section-header here */}
-              <div className="section-header">
-                <h2 className="about-title">Web Development Solutions for Your Business</h2>
+              <div className="section-header-about">
+                <h2 className="about-titles">Web Development Solutions for Your Business</h2>
               </div>
               <p className="about-text">
                 At DevTeam, we specialize in creating custom, high-performance websites tailored to your specific business needs. 
