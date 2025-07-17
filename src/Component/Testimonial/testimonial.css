@@ -43,7 +43,7 @@
   z-index: 1;
 }
 
-.section-header {
+.section-headers {
   text-align: center;
   margin-bottom: 60px;
 }
@@ -61,7 +61,7 @@
   text-transform: uppercase;
 }
 
-.testimonial-title {
+.testimonial-titles {
   font-size: 2.5rem;
   margin-bottom: 16px;
   color: #ffffff;

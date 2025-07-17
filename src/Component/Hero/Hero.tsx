@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="hero-overlay"></div>
       </div>
       <div className="hero-content">
-        <Navbar />
+        <Navbar hide={undefined} />
         <div className={`hero-text${animate ? ' pop-in' : ''}`}>
           <h1 className="hero-title">Web Development for Your Business</h1>
           <p className="hero-description">

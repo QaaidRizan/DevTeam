@@ -31,7 +31,7 @@ const Team = () => {
       <div className="team-blob secondary"></div>
       
       <div className="team-container">
-        <div className="section-header">
+        <div className="section-headers">
           <h2 className="team-title">The Person Behind the Code</h2>
         </div>
         

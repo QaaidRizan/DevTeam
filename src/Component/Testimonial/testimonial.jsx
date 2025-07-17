@@ -60,8 +60,8 @@ const Testimonial = () => {
       <div className="testimonial-blob secondary"></div>
       
       <div className="testimonial-container">
-        <div className="section-header">
-          <h2 className="testimonial-title">What Our Clients Say</h2>
+        <div className="section-headers">
+          <h2 className="testimonial-titles">What Our Clients Say</h2>
         </div>
         
         <div className="testimonial-grid">
