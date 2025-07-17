@@ -30,7 +30,7 @@ const Navbar = ({ hide }) => {
             <li><a href="/#Hero">Home</a></li>
             <li><a href="/#about">About Us</a></li>
             <li>
-              <a href="/Projectweb">
+              <a href="/projectweb">
                 Project
               </a>
             </li>
