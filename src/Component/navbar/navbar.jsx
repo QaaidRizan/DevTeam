@@ -30,7 +30,7 @@ const Navbar = ({ hide }) => {
             <li><a href="/#Hero">Home</a></li>
             <li><a href="/#about">About Us</a></li>
             <li>
-              <a href="/webproject">
+              <a href="/Projectweb">
                 Project
               </a>
             </li>
@@ -44,7 +44,7 @@ const Navbar = ({ hide }) => {
               <a href="#service">Service &#9662;</a>
               {dropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="/webproject">Web Development</a></li>
+                  <li><a href="/projectweb">Web Development</a></li>
                   <li><a href="/project">POS System</a></li>
                 </ul>
               )}

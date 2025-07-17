@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import { Toaster } from 'react-hot-toast';
 import Home from './Pages/Home/Home';
-import WebProject from './Component/WebProject/WebProject';
+import Projectweb from './Pages/Projectweb/Projectweb';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -17,7 +17,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/webproject" element={<WebProject />} />
+            <Route path="/projectweb" element={<Projectweb />} />
+            {/* Add other routes here as needed */}
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
