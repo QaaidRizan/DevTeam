@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="footer-links-column">
               <h4>Contact</h4>
               <ul className="contact-info">
-                <li>contactdevteam1721@gmail.com</li>
+                <li>devteambuilders@gmail.com</li>
                 <li>+94 75-262-2860</li>
                 <li>Sri Lanka</li>
               </ul>
