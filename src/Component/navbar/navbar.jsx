@@ -40,7 +40,7 @@ const Navbar = ({ hide }) => {
               <a href="#service">Service &#9662;</a>
               {dropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="/project">Web Development</a></li>
+                  <li><a href="/projectweb">Web Development</a></li>
                   <li><a href="/project">POS System</a></li>
                 </ul>
               )}
