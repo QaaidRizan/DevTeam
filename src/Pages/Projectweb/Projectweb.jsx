@@ -4,7 +4,10 @@ import Navbar from '../../Component/navbar/navbar';
 import Footer from '../../Component/Footer/footer';
 import './Projectweb.css';
 
+
+
 const Projectweb = () => {
+  const heroRef = useRef(null);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
